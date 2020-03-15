@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+
+		<!-- Assume students is the database name -->
+
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://ec2-52-86-33-50.compute-1.amazonaws.com:5432/d2nss0h2d9hi7b
+		</property>
+
+		<property name="hibernate.connection.username">
+			jbqtnwynxlpybk
+		</property>
+
+		<property name="hibernate.connection.password">
+			a2f4fd553f30a48ff9f22fd8af0ba1ee5cf14495dd53f951d2fcd0030a8c31ed
+		</property>
+
+		<property name="hbm2ddl">
+			update
+		</property>
+		<mapping class="com.test.Book" />
+		<mapping class="com.test.Author" />
+	</session-factory>
+</hibernate-configuration>
